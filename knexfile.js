@@ -1,8 +1,3 @@
-// Update with your config settings.
-
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
 module.exports = {
   development: {
     client: "pg",
@@ -10,6 +5,10 @@ module.exports = {
       database: process.env.SECRET_DB,
       user: process.env.SECRET_USER,
       password: process.env.SECRET_PASSWORD,
+    },
+    migrations: {
+      tableName: "knex_migrations",
+      directory: `${__dirname}/src/database/migrations`,
     },
   },
 };
