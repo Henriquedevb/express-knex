@@ -1,7 +1,11 @@
-const express = require("express");
-const app = express();
 require("dotenv").config();
+const express = require("express");
 
-app.listen(3000, () => {
+const routes = require("./routes");
+const app = express();
+
+app.use(routes);
+
+app.listen(3131, () => {
   console.log("Server is runner");
 });
