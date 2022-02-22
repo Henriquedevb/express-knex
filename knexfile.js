@@ -2,9 +2,9 @@ module.exports = {
   development: {
     client: "pg",
     connection: {
-      database: process.env.SECRET_DB,
-      user: process.env.SECRET_USER,
-      password: process.env.SECRET_PASSWORD,
+      database: "knex_new",
+      user: "postgres",
+      password: "henrique",
     },
     migrations: {
       tableName: "knex_migrations",
